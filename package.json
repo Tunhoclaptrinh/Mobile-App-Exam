@@ -1,0 +1,60 @@
+{
+  "name": "LibraryApp",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "preinstall": "node scripts/require-pnpm.cjs",
+    "android": "node scripts/android.cjs",
+    "android:fast": "node scripts/android.cjs --extra-params -PreactNativeArchitectures=x86_64",
+    "android:device": "node scripts/android.cjs --extra-params -PreactNativeArchitectures=arm64-v8a",
+    "ios": "react-native run-ios",
+    "start": "react-native start",
+    "lint": "eslint . --ext .js,.cjs,.ts,.tsx --max-warnings=0",
+    "typecheck": "tsc --noEmit",
+    "test": "jest",
+    "format": "prettier --write App.tsx index.js src __tests__ scripts docs README.md package.json",
+    "format:check": "prettier --check App.tsx index.js src __tests__ scripts docs README.md package.json",
+    "icons:generate": "node scripts/generate-icons.cjs",
+    "icons:check": "node scripts/generate-icons.cjs --check",
+    "check": "pnpm icons:check && pnpm format:check && pnpm lint && pnpm typecheck && pnpm test --runInBand",
+    "android:demo": "node scripts/build-demo.cjs"
+  },
+  "dependencies": {
+    "@react-native-async-storage/async-storage": "^3.1.1",
+    "@react-navigation/native": "^7.5.1",
+    "@react-navigation/native-stack": "^7.19.2",
+    "react": "19.2.3",
+    "react-native": "0.87.1",
+    "react-native-safe-area-context": "^5.5.2",
+    "react-native-screens": "^4.28.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.25.2",
+    "@babel/preset-env": "^7.25.3",
+    "@babel/runtime": "^7.25.0",
+    "@react-native-community/cli": "20.2.0",
+    "@react-native-community/cli-platform-android": "20.2.0",
+    "@react-native-community/cli-platform-ios": "20.2.0",
+    "@react-native/babel-preset": "0.87.1",
+    "@react-native/codegen": "0.87.1",
+    "@react-native/eslint-config": "0.87.1",
+    "@react-native/gradle-plugin": "0.87.1",
+    "@react-native/jest-preset": "0.87.1",
+    "@react-native/metro-config": "0.87.1",
+    "@react-native/typescript-config": "0.87.1",
+    "@resvg/resvg-js": "2.6.2",
+    "@types/jest": "^29.5.13",
+    "@types/react": "^19.2.0",
+    "@types/react-test-renderer": "^19.1.0",
+    "babel-plugin-module-resolver": "^5.0.3",
+    "eslint": "^8.19.0",
+    "jest": "^29.6.3",
+    "prettier": "2.8.8",
+    "react-test-renderer": "19.2.3",
+    "typescript": "^6.0.3"
+  },
+  "engines": {
+    "node": ">=22.13.0"
+  },
+  "packageManager": "pnpm@12.14.0"
+}
