@@ -1,0 +1,1 @@
+export { AppBadge } from './AppBadge';
