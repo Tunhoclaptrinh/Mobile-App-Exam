@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1024" height="1024" viewBox="0 0 1024 1024">
+  <title>LibraryApp — open book with a bookmark</title>
+  <defs>
+    <linearGradient id="cyan" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#16C5DC"/>
+      <stop offset="0.48" stop-color="#0891B2"/>
+      <stop offset="1" stop-color="#0E7490"/>
+    </linearGradient>
+    <mask id="bookmark-cut">
+      <rect width="1024" height="1024" fill="#FFFFFF"/>
+      <path d="M650 278 H704 V462 L677 438 L650 462 Z" fill="#000000"/>
+    </mask>
+  </defs>
+  <g id="background">
+    <rect width="1024" height="1024" fill="url(#cyan)"/>
+    <path d="M0 0 H1024 V180 C692 88 344 126 0 342 Z" fill="#FFFFFF" opacity="0.045"/>
+  </g>
+  <g id="mark-shadow" transform="translate(0 16)" opacity="0.16">
+    <path d="M238 322 Q238 308 252 302 C343 267 433 282 512 333 C591 282 681 267 772 302 Q786 308 786 322 V706 Q786 731 762 724 C666 695 588 714 512 762 C436 714 358 695 262 724 Q238 731 238 706 Z" fill="#084F65"/>
+  </g>
+  <g id="mark" mask="url(#bookmark-cut)">
+    <path d="M238 330 Q238 315 254 310 C350 280 438 305 512 351 C586 305 674 280 770 310 Q786 315 786 330 V706 Q786 731 762 724 C666 695 588 714 512 762 C436 714 358 695 262 724 Q238 731 238 706 Z" fill="#B7EDF4"/>
+    <path d="M254 296 C343 264 429 283 494 327 V710 C426 668 346 653 254 681 Q246 683 246 675 V309 Q246 299 254 296 Z" fill="#FFFFFF"/>
+    <path d="M530 327 C595 283 681 264 770 296 Q778 299 778 309 V675 Q778 683 770 681 C678 653 598 668 530 710 Z" fill="#F2FCFE"/>
+  </g>
+</svg>
